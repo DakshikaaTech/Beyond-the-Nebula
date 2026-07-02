@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://2p6l6iohe787"]
+
+[ext_resource type="Texture2D" uid="uid://qxex87yrbdm1" path="res://Nebula.jpeg" id="1_v6p8y"]
+
+[node name="TitleScreen" type="Node2D" unique_id=1865448359]
+
+[node name="Background" type="TextureRect" parent="." unique_id=120360676]
+offset_right = 1150.0
+offset_bottom = 647.0
+texture = ExtResource("1_v6p8y")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1310997761]
+clip_contents = false
+offset_right = 1147.0
+offset_bottom = 220.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "BEYOND THE NEBULA"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=637391381]
+offset_left = 361.0
+offset_top = 193.0
+offset_right = 787.0
+offset_bottom = 440.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=233320559]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "Start Game"
+
+[node name="Start2" type="Button" parent="VBoxContainer" unique_id=1388430774]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "Settings"
+
+[node name="Start3" type="Button" parent="VBoxContainer" unique_id=1087123523]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "Quit"
