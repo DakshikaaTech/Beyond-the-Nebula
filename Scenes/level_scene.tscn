@@ -1,3 +1,38 @@
 [gd_scene format=3 uid="uid://dyuwbh5i7co71"]
 
+[ext_resource type="Texture2D" uid="uid://cryg8utm63na2" path="res://Beyond the Nebula.jpeg" id="1_cn3xy"]
+[ext_resource type="Texture2D" uid="uid://btqupa0a1s0v2" path="res://icon.svg" id="2_c7xwe"]
+
 [node name="Node2D" type="Node2D" unique_id=726285834]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1870916582]
+offset_top = 2.0
+offset_right = 1150.0
+offset_bottom = 643.0
+texture = ExtResource("1_cn3xy")
+
+[node name="SatelliteContainer" type="HBoxContainer" parent="." unique_id=1656019668]
+offset_left = 241.0
+offset_top = 300.0
+offset_right = 897.0
+offset_bottom = 463.0
+
+[node name="Satellite" type="TextureRect" parent="SatelliteContainer" unique_id=124212885]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Satellite2" type="TextureRect" parent="SatelliteContainer" unique_id=79953838]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Satellite3" type="TextureRect" parent="SatelliteContainer" unique_id=2042400811]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Satellite4" type="TextureRect" parent="SatelliteContainer" unique_id=1974145996]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Satellite5" type="TextureRect" parent="SatelliteContainer" unique_id=1770019429]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
