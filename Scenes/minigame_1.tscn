@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://0hfbfabnga1x"]
+
+[ext_resource type="Texture2D" uid="uid://cdk0kxajkwyf8" path="res://starry.jpeg" id="1_enoba"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkm75"]
+size = Vector2(1266, 72)
+
+[node name="Minigame_1" type="Node2D" unique_id=1751549654]
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=23753949]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=2084845073]
+offset_right = 1149.0
+offset_bottom = 572.0
+texture = ExtResource("1_enoba")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2032583769]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=357364323]
+offset_left = -2.0
+offset_top = 579.0
+offset_right = 1156.0
+offset_bottom = 641.0
+color = Color(1, 0.25030932, 0.17558163, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1964854536]
+position = Vector2(595, 606)
+shape = SubResource("RectangleShape2D_kkm75")

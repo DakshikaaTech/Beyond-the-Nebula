@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b4dcjbp3g8f3a"]
+
+[ext_resource type="Script" uid="uid://4v65uwonaw25" path="res://player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://6qpa3xbcc5ec" path="res://Tiny-red-among-us.png" id="2_6t5aa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kkm75"]
+radius = 82.20097
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iolu5"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1241422164]
+script = ExtResource("1_cvnsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2028287154]
+position = Vector2(1, 2.5)
+scale = Vector2(1.0039682, 1.0097656)
+texture = ExtResource("2_6t5aa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=630451443]
+position = Vector2(8, -1)
+shape = SubResource("CircleShape2D_kkm75")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1005653972]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=600369055]
+shape = SubResource("CircleShape2D_iolu5")

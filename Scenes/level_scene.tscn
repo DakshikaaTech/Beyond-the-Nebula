@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dyuwbh5i7co71"]
 
+[ext_resource type="Script" uid="uid://csewqaq5by7rm" path="res://Scenes/level_scene.gd" id="1_c7xwe"]
 [ext_resource type="Texture2D" uid="uid://cryg8utm63na2" path="res://Beyond the Nebula.jpeg" id="1_cn3xy"]
 [ext_resource type="Texture2D" uid="uid://btqupa0a1s0v2" path="res://icon.svg" id="2_c7xwe"]
 
 [node name="Node2D" type="Node2D" unique_id=726285834]
+script = ExtResource("1_c7xwe")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1870916582]
 offset_top = 2.0
@@ -11,28 +13,46 @@ offset_right = 1150.0
 offset_bottom = 643.0
 texture = ExtResource("1_cn3xy")
 
-[node name="SatelliteContainer" type="HBoxContainer" parent="." unique_id=1656019668]
-offset_left = 241.0
-offset_top = 300.0
-offset_right = 897.0
-offset_bottom = 463.0
+[node name="GodotContainer" type="HBoxContainer" parent="." unique_id=1656019668]
+offset_left = 235.0
+offset_top = 230.0
+offset_right = 891.0
+offset_bottom = 379.0
 
-[node name="Satellite" type="TextureRect" parent="SatelliteContainer" unique_id=124212885]
+[node name="Godot" type="TextureRect" parent="GodotContainer" unique_id=124212885]
 layout_mode = 2
 texture = ExtResource("2_c7xwe")
 
-[node name="Satellite2" type="TextureRect" parent="SatelliteContainer" unique_id=79953838]
+[node name="Godot2" type="TextureRect" parent="GodotContainer" unique_id=79953838]
 layout_mode = 2
 texture = ExtResource("2_c7xwe")
 
-[node name="Satellite3" type="TextureRect" parent="SatelliteContainer" unique_id=2042400811]
+[node name="Godot3" type="TextureRect" parent="GodotContainer" unique_id=2042400811]
 layout_mode = 2
 texture = ExtResource("2_c7xwe")
 
-[node name="Satellite4" type="TextureRect" parent="SatelliteContainer" unique_id=1974145996]
+[node name="Godot4" type="TextureRect" parent="GodotContainer" unique_id=1974145996]
 layout_mode = 2
 texture = ExtResource("2_c7xwe")
 
-[node name="Satellite5" type="TextureRect" parent="SatelliteContainer" unique_id=1770019429]
+[node name="Godot5" type="TextureRect" parent="GodotContainer" unique_id=1770019429]
 layout_mode = 2
 texture = ExtResource("2_c7xwe")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=1486615780]
+offset_left = 58.0
+offset_top = 439.0
+offset_right = 450.0
+offset_bottom = 559.0
+theme_override_colors/default_color = Color(0.003921569, 0.003921569, 0.99607843, 1)
+theme_override_font_sizes/normal_font_size = 100
+text = "Level #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=122205141]
+offset_left = 866.0
+offset_top = 437.0
+offset_right = 1022.0
+offset_bottom = 566.0
+theme_override_colors/default_color = Color(0.14901961, 0.19607843, 1, 1)
+theme_override_font_sizes/normal_font_size = 100
+text = "0.0"
