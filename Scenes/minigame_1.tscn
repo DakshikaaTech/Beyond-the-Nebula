@@ -17,7 +17,7 @@ size = Vector2(423, 81)
 size = Vector2(198.5, 82)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tnlfr"]
-size = Vector2(86.5, 76)
+size = Vector2(83.625, 76)
 
 [sub_resource type="Animation" id="Animation_f6tb2"]
 length = 0.001
@@ -184,7 +184,7 @@ offset_bottom = 167.0
 color = Color(1, 0.25030932, 0.17558163, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=1460760797]
-position = Vector2(-24, 126)
+position = Vector2(-24.8125, 126)
 shape = SubResource("RectangleShape2D_tnlfr")
 
 [node name="Platform5" type="StaticBody2D" parent="." unique_id=1187290901]
@@ -246,7 +246,7 @@ autoplay = &"floating"
 [node name="Area2D" type="Area2D" parent="Star2D2" unique_id=2095105359]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Star2D2/Area2D" unique_id=952816136]
-position = Vector2(161, 114)
+position = Vector2(162, 117)
 shape = SubResource("CircleShape2D_kkm75")
 
 [node name="Star2D3" type="Node2D" parent="." unique_id=254104414]
