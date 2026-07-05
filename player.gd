@@ -2,10 +2,15 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -500.0
 
 
 func _physics_process(delta: float) -> void:
+	move_and_slide()
+	
+	var screen_size = get_viewport_rect().size
+	global_position.x = clampf(global_position.x,0,screen_size.x)
+	global_position.y=clampf(global_position.y,0,screen_size.x)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
