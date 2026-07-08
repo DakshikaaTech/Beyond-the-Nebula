@@ -1,3 +1,48 @@
 [gd_scene format=3 uid="uid://cgct0s1uk85bf"]
 
+[ext_resource type="Texture2D" uid="uid://cdk0kxajkwyf8" path="res://starry.jpeg" id="1_1q1k2"]
+[ext_resource type="Script" uid="uid://dw0j8dltpdhf6" path="res://Scenes/done_screen.gd" id="1_8rpo2"]
+[ext_resource type="Texture2D" uid="uid://bwj5280jtlcj" path="res://Earth.png" id="2_8rpo2"]
+[ext_resource type="Texture2D" uid="uid://6qpa3xbcc5ec" path="res://Tiny-red-among-us.png" id="3_5u8ma"]
+[ext_resource type="Script" uid="uid://b0yml81tga7wm" path="res://Scenes/earth.gd" id="4_5u8ma"]
+
+[sub_resource type="GDScript" id="GDScript_uxf1h"]
+
 [node name="Node2D" type="Node2D" unique_id=851026878]
+script = ExtResource("1_8rpo2")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1632601190]
+offset_left = -3.0
+offset_top = 18.0
+offset_right = 1151.0
+offset_bottom = 686.0
+texture = ExtResource("1_1q1k2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2133318192]
+offset_top = 20.0
+offset_right = 1150.0
+offset_bottom = 99.0
+theme_override_font_sizes/normal_font_size = 48
+text = "CONGRATULATIONS! You've reached Earth safely!"
+
+[node name="Earth" type="Sprite2D" parent="." unique_id=1115443357]
+position = Vector2(571.50006, 728)
+scale = Vector2(2.1135135, 1.9855331)
+texture = ExtResource("2_8rpo2")
+script = ExtResource("4_5u8ma")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1543269484]
+position = Vector2(572.00006, 191.00002)
+scale = Vector2(1.4662699, 1.28125)
+texture = ExtResource("3_5u8ma")
+script = SubResource("GDScript_uxf1h")
+
+[node name="Button" type="Button" parent="." unique_id=1639733987]
+offset_left = 669.0
+offset_top = 392.0
+offset_right = 970.0
+offset_bottom = 516.0
+theme_override_font_sizes/font_size = 50
+text = "Play Again"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
