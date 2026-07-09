@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bnowdbp56ui4j"]
+
+[ext_resource type="Texture2D" uid="uid://cryg8utm63na2" path="res://Beyond the Nebula.jpeg" id="1_h4kts"]
+[ext_resource type="Script" uid="uid://c7banb8cbkyj4" path="res://Scenes/select_level.gd" id="1_rxwy8"]
+[ext_resource type="Script" uid="uid://c4qekyxoc6bt5" path="res://Scenes/button.gd" id="2_ksorg"]
+
+[node name="Node2D" type="Node2D" unique_id=2003901373]
+script = ExtResource("1_rxwy8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1736363543]
+offset_right = 1157.0
+offset_bottom = 662.0
+texture = ExtResource("1_h4kts")
+
+[node name="Button" type="Button" parent="." unique_id=793164795]
+offset_left = 264.0
+offset_top = 280.0
+offset_right = 406.0
+offset_bottom = 428.0
+theme_override_font_sizes/font_size = 50
+text = "1"
+script = ExtResource("2_ksorg")
+
+[node name="Button2" type="Button" parent="." unique_id=1192943470]
+offset_left = 741.0
+offset_top = 279.0
+offset_right = 883.0
+offset_bottom = 427.0
+theme_override_font_sizes/font_size = 50
+text = "2"
+script = ExtResource("2_ksorg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1457492525]
+offset_left = 260.0
+offset_top = 503.0
+offset_right = 885.0
+offset_bottom = 642.0
+theme_override_font_sizes/normal_font_size = 95
+text = "Select a Level"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

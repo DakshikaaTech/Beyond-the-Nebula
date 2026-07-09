@@ -46,7 +46,10 @@ func _process(_delta: float) -> void: # runs EVERY FRAME
 			godot_3.hide()
 			godot_4.hide()
 		0:
-			godot_container.hide() # just hides everything
+			godot_container.hide()
+			get_tree().change_scene_to_file("res://Scenes/loser_scene.tscn")
+			Global.lives=5
+			Global.minigames_done=0# just hides everything
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
 	level.text = "Level " + str(Global.minigames_done) # this tells you want minigame you're on using concatenation (google the word yo)
