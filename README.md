@@ -11,8 +11,8 @@ You have 5 live and each round, a minigame is chosen to for you to beat. Complet
 
 Minigames:
 
-#1 Platformer game - Collect all 3 stars within 10 seconds
-#2 Clicker game - Click all 7 stars within 7 seconds
+#1-  Platformer game - Collect all 3 stars within 10 seconds
+#2-  Clicker game - Click all 7 stars within 7 seconds
 
 Controls
 
