@@ -16,14 +16,14 @@ Minigames:
 
 Controls
 
-Left and Right -> Arrow buttons
-Jump -> Space bar
+- Left and Right -> Arrow buttons
+- Jump -> Space bar
 
 Credits
 
-Game built using Godot Engine
-All assets used in the game are open source 
-The main character is a fan art and is not affiliated with Amongus
+- Game built using Godot Engine
+- All assets used in the game are open source 
+- The main character is a fan art and is not affiliated with Amongus
 
 
 
