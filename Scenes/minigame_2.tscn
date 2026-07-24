@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://clkm4dnwihh2k" path="res://pixel-art-mario-etoile-3874418.png" id="3_h684j"]
 [ext_resource type="Script" uid="uid://bijk0w2fihoxf" path="res://Scenes/button_1.gd" id="4_wu6l1"]
 [ext_resource type="PackedScene" uid="uid://duqb5vvd15j4g" path="res://Scenes/themed_timer.tscn" id="5_cqly6"]
+[ext_resource type="AudioStream" uid="uid://bjv4wrkknh23g" path="res://matthewvakaliuk73627-mouse-click-290204.mp3" id="6_mmgun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ja6b"]
 size = Vector2(1171, 59)
@@ -93,6 +94,10 @@ script = ExtResource("4_wu6l1")
 
 [node name="themed_timer" parent="." unique_id=1780463297 instance=ExtResource("5_cqly6")]
 position = Vector2(-6, 20)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1711160480]
+stream = ExtResource("6_mmgun")
+bus = &"SFX"
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
 [connection signal="pressed" from="Button_6" to="Button_6" method="_on_pressed"]

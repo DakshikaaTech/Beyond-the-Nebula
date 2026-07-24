@@ -2,6 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://qxex87yrbdm1" path="res://Nebula.jpeg" id="1_klylv"]
 [ext_resource type="Script" uid="uid://cp585m41hv74h" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+[ext_resource type="AudioStream" uid="uid://b7x5m6eg6nypg" path="res://alex-morgan-fantasy-adventure-quest-537478.mp3" id="3_4gxqj"]
+[ext_resource type="Script" uid="uid://da02ff1mdtptn" path="res://Scenes/audio_control.gd" id="3_twnyg"]
+[ext_resource type="Script" uid="uid://gulklg7t73cx" path="res://Scenes/full_screen_control.gd" id="4_55kwv"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_kkm75"]
+color = Color(0.89490694, 0.9461085, 0.9855439, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_iolu5"]
+color = Color(0, 0, 1, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ynvvd"]
+color = Color(0, 0, 1, 1)
+thickness = 6
 
 [node name="TitleScreen" type="Node2D" unique_id=1865448359]
 script = ExtResource("1_p3fck")
@@ -19,30 +34,96 @@ theme_override_constants/outline_size = 40
 theme_override_font_sizes/normal_font_size = 108
 text = "BEYOND THE NEBULA"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=637391381]
+[node name="MainButtons" type="VBoxContainer" parent="." unique_id=637391381]
 offset_left = 361.0
 offset_top = 193.0
-offset_right = 787.0
-offset_bottom = 440.0
+offset_right = 792.0
+offset_bottom = 439.0
 
-[node name="Start" type="Button" parent="VBoxContainer" unique_id=233320559]
+[node name="Start" type="Button" parent="MainButtons" unique_id=233320559]
 layout_mode = 2
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 50
 text = "Start Game"
 
-[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1388430774]
+[node name="Settings" type="Button" parent="MainButtons" unique_id=1388430774]
 layout_mode = 2
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 50
 text = "Settings"
 
-[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1087123523]
+[node name="Quit" type="Button" parent="MainButtons" unique_id=1087123523]
 layout_mode = 2
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 50
 text = "Quit"
 
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="Options" type="Panel" parent="." unique_id=45161945]
+offset_left = 331.0
+offset_top = 153.0
+offset_right = 822.0
+offset_bottom = 525.0
+
+[node name="Label" type="Label" parent="Options" unique_id=881803691]
+layout_mode = 0
+offset_right = 490.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 50
+text = "            Options"
+
+[node name="Back" type="Button" parent="Options" unique_id=716880828]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 285.0
+offset_right = 491.0
+offset_bottom = 368.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[node name="Audio Control" type="HSlider" parent="Options" unique_id=872975629]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 121.0
+offset_right = 452.0
+offset_bottom = 196.0
+theme_override_styles/slider = SubResource("StyleBoxLine_kkm75")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_iolu5")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_ynvvd")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("3_twnyg")
+audio_bus_name = "Music"
+
+[node name="Label2" type="Label" parent="Options" unique_id=1459464851]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 81.0
+offset_right = 350.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 40
+text = "Volume Control:"
+
+[node name="FullScreenControl" type="CheckButton" parent="Options" unique_id=514307760]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 201.0
+offset_right = 450.0
+offset_bottom = 273.0
+theme_override_font_sizes/font_size = 40
+text = "Fullscreen"
+script = ExtResource("4_55kwv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2059970437]
+stream = ExtResource("3_4gxqj")
+volume_db = 9.0
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="MainButtons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainButtons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainButtons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="Options/Audio Control" to="Options/Audio Control" method="_on_value_changed"]
+[connection signal="toggled" from="Options/FullScreenControl" to="Options/FullScreenControl" method="_on_toggled"]

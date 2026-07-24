@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://csewqaq5by7rm" path="res://Scenes/level_scene.gd" id="1_c7xwe"]
 [ext_resource type="Texture2D" uid="uid://cryg8utm63na2" path="res://Beyond the Nebula.jpeg" id="1_cn3xy"]
 [ext_resource type="Texture2D" uid="uid://btqupa0a1s0v2" path="res://icon.svg" id="2_c7xwe"]
+[ext_resource type="AudioStream" uid="uid://cqnvk550pnnrg" path="res://the_mountain-8-bit-retro-522443.mp3" id="4_2fcgv"]
 
 [node name="Node2D" type="Node2D" unique_id=726285834]
 script = ExtResource("1_c7xwe")
@@ -56,3 +57,8 @@ offset_bottom = 566.0
 theme_override_colors/default_color = Color(0.14901961, 0.19607843, 1, 1)
 theme_override_font_sizes/normal_font_size = 90
 text = "0.0"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1161279751]
+stream = ExtResource("4_2fcgv")
+autoplay = true
+bus = &"Music"

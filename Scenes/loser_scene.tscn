@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cqwo5nf51erls" path="res://Dead Amongus.png" id="3_0otmm"]
 [ext_resource type="Script" uid="uid://csl2n4x8xq5mk" path="res://Scenes/try_again.gd" id="4_62n2q"]
 [ext_resource type="Script" uid="uid://mp8upnvv7j7c" path="res://Scenes/main_menu.gd" id="5_wh8i6"]
+[ext_resource type="AudioStream" uid="uid://d3ytldxr7m7q6" path="res://coghezzi-game-over-orchestral-stinger-cartoon-defeat-546515.mp3" id="6_0otmm"]
 
 [node name="Loser_scene" type="Node2D" unique_id=49138661]
 script = ExtResource("1_4l0i0")
@@ -48,6 +49,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 75
 text = "Main Menu"
 script = ExtResource("5_wh8i6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=766434072]
+stream = ExtResource("6_0otmm")
+volume_db = 1.0
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="VBoxContainer/try_again" to="." method="_on_try_again_pressed"]
 [connection signal="pressed" from="VBoxContainer/main_menu" to="." method="_on_main_menu_pressed"]
