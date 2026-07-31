@@ -217,6 +217,13 @@ shape = SubResource("CircleShape2D_kkm75")
 
 [node name="themed_timer" parent="." unique_id=1780463297 instance=ExtResource("6_0uv5o")]
 
+[node name="VirtualJoystick" type="VirtualJoystick" parent="." unique_id=1897263670]
+offset_left = 67.0
+offset_top = 398.0
+offset_right = 174.0
+offset_bottom = 499.0
+action_up = &"ui_accept"
+
 [connection signal="Star_collected" from="Star2D" to="." method="star_collect"]
 [connection signal="Star_collected" from="Star2D2" to="." method="star_collect"]
 [connection signal="Star_collected" from="Star2D3" to="." method="star_collect"]
