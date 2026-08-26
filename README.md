@@ -9,26 +9,30 @@ How to Play
 
 You have 5 live and each round, a minigame is chosen to for you to beat. Complete the objective to survive. Fail and you lose a life. Lose all 5 and it's game over. 
 
+A game full of short space-themed minigames. Survive to make it safely back to Earth!
+
+How to Play
+
+You have 5 live and each round, a minigame is chosen to for you to beat. Complete the objective to survive. Fail and you lose a life. Lose all 5 and it's game over. 
+
 Minigames:
 
-1.  Platformer game - Collect all 3 stars within 10 seconds
-2.  Clicker game - Click all 7 stars within 7 seconds
+#1 Platformer game - Collect all 3 stars within 10 seconds
+#2 Clicker game - Click all 7 stars within 7 seconds
 
 Controls
 
-- Left and Right -> Arrow buttons
-- Jump -> Space bar
+For Desktop/Laptop users:
+Left and Right -> Arrow buttons
+Jump -> Space bar
+
+For Mobile/Tablet users:
+Use the virtual joystick situated on the bottom left of the game screen
+
 
 Credits
 
-- Game built using Godot Engine
-- All assets used in the game are open source 
-- The main character is a fan art and is not affiliated with Amongus
-
-
-
-
-
-
-
-
+Game built using Godot Engine
+All assets used in the game are open source 
+The main character is a fan art and is not affiliated with Amongus
+All music and SFX from Pixabay.com
