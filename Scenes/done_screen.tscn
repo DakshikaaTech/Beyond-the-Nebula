@@ -89,7 +89,7 @@ text = "Play Again!"
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=708525990]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Exit"
+text = "Main Menu"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1101438625]
 stream = ExtResource("6_uxf1h")

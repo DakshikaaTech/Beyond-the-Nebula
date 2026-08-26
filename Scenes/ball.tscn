@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://6wmmha8ae76i"]
+
+[ext_resource type="Script" uid="uid://d1jmugkswqb8" path="res://ball.gd" id="1_ij5cq"]
+[ext_resource type="Texture2D" uid="uid://uvjb41ef3nq7" path="res://ball.PNG" id="2_376qj"]
+[ext_resource type="AudioStream" uid="uid://cwwmlobklcj2o" path="res://lumora_studios-pixel-jump-319167.mp3" id="3_376qj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kkm75"]
+radius = 45.891174
+
+[node name="ball" type="CharacterBody2D" unique_id=1025570205]
+script = ExtResource("1_ij5cq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1586272969]
+position = Vector2(277.37497, 148.625)
+scale = Vector2(0.35626402, 0.3730425)
+texture = ExtResource("2_376qj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=673925855]
+position = Vector2(279, 163)
+shape = SubResource("CircleShape2D_kkm75")
+
+[node name="BounceSound" type="AudioStreamPlayer2D" parent="." unique_id=1521821200]
+stream = ExtResource("3_376qj")

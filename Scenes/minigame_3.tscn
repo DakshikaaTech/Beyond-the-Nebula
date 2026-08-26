@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bobqaoga4dqwf"]
+
+[ext_resource type="Script" uid="uid://c6fl2gr117me8" path="res://Scenes/minigame_3.gd" id="1_6sdpr"]
+[ext_resource type="PackedScene" uid="uid://6wmmha8ae76i" path="res://Scenes/ball.tscn" id="1_asmx3"]
+[ext_resource type="Script" uid="uid://ed5rpn70s5lj" path="res://Scenes/paddle.gd" id="2_ihkhm"]
+[ext_resource type="Texture2D" uid="uid://driypka5p3gbt" path="res://paddle.PNG" id="3_we0jk"]
+[ext_resource type="Texture2D" uid="uid://bnoasiwm5psjk" path="res://Stars.jpg" id="4_we0jk"]
+[ext_resource type="PackedScene" uid="uid://duqb5vvd15j4g" path="res://Scenes/themed_timer.tscn" id="6_lr4ld"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihkhm"]
+size = Vector2(9, 679)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_we0jk"]
+size = Vector2(1154, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6sdpr"]
+size = Vector2(15, 677)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkm75"]
+size = Vector2(299.5, 61)
+
+[node name="Node2D" type="Node2D" unique_id=408448072]
+script = ExtResource("1_6sdpr")
+
+[node name="themed_timer" parent="." unique_id=1780463297 instance=ExtResource("6_lr4ld")]
+position = Vector2(1023, 55)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1872158080]
+offset_right = 1920.0
+offset_bottom = 1200.0
+texture = ExtResource("4_we0jk")
+
+[node name="ball" parent="." unique_id=1025570205 instance=ExtResource("1_asmx3")]
+position = Vector2(269, 133)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1803773405]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=520899385]
+position = Vector2(-6.5, 329.5)
+shape = SubResource("RectangleShape2D_ihkhm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1213746039]
+position = Vector2(570, -7)
+shape = SubResource("RectangleShape2D_we0jk")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1979592442]
+position = Vector2(1162.5, 327.5)
+shape = SubResource("RectangleShape2D_6sdpr")
+
+[node name="paddle" type="StaticBody2D" parent="." unique_id=1781319810]
+script = ExtResource("2_ihkhm")
+
+[node name="Sprite2D" type="Sprite2D" parent="paddle" unique_id=1584299781]
+position = Vector2(181.49998, 624)
+scale = Vector2(0.8604167, 1)
+texture = ExtResource("3_we0jk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paddle" unique_id=1515217768]
+position = Vector2(180.25, 628)
+shape = SubResource("RectangleShape2D_kkm75")
