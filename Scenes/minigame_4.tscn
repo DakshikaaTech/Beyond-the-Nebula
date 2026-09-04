@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://d3ketmpljmaf3"]
+
+[ext_resource type="Texture2D" uid="uid://otysd07pq086" path="res://img/background/plx-1.png" id="1_ake4f"]
+[ext_resource type="Script" uid="uid://b7ubu5s6jur7w" path="res://Scenes/minigame_4.gd" id="1_y1k8l"]
+[ext_resource type="Texture2D" uid="uid://d1vproij8f0ui" path="res://img/background/plx-2.png" id="2_57wpc"]
+[ext_resource type="Texture2D" uid="uid://cfcgrnfbbed8s" path="res://img/background/plx-3.png" id="3_frvhq"]
+[ext_resource type="Texture2D" uid="uid://4v2li8yf1ab2" path="res://img/background/plx-4.png" id="4_yexny"]
+[ext_resource type="Texture2D" uid="uid://dscedk5gjxpqm" path="res://img/background/plx-5.png" id="5_y1k8l"]
+[ext_resource type="Texture2D" uid="uid://bihqx8c32ps3n" path="res://img/background/ground.png" id="6_ksguu"]
+[ext_resource type="Script" uid="uid://b2x6hraowl8dm" path="res://Scenes/ground.gd" id="7_57wpc"]
+[ext_resource type="PackedScene" uid="uid://bufs4m04wlg4h" path="res://Scenes/dino.tscn" id="8_frvhq"]
+[ext_resource type="Script" uid="uid://waxfq8tyoccg" path="res://Scenes/spawner.gd" id="9_yexny"]
+[ext_resource type="PackedScene" uid="uid://duqb5vvd15j4g" path="res://Scenes/themed_timer.tscn" id="11_ksguu"]
+[ext_resource type="AudioStream" uid="uid://cwwmlobklcj2o" path="res://lumora_studios-pixel-jump-319167.mp3" id="12_jlqlc"]
+[ext_resource type="AudioStream" uid="uid://cxk81ccybquhy" path="res://loswin23-birds-in-the-forest-585668.mp3" id="13_aaoy5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlqlc"]
+size = Vector2(1163, 95.5)
+
+[node name="ground" type="CharacterBody2D" unique_id=1738387651]
+script = ExtResource("1_y1k8l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1120326533]
+position = Vector2(577.5, 620)
+shape = SubResource("RectangleShape2D_jlqlc")
+
+[node name="Plx1" type="Sprite2D" parent="." unique_id=456392183]
+position = Vector2(577, 325)
+scale = Vector2(1.0034722, 1)
+texture = ExtResource("1_ake4f")
+
+[node name="Ground" type="Sprite2D" parent="." unique_id=1815846676]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1789090007]
+repeat_size = Vector2(1152, 648)
+autoscroll = Vector2(-50, 0)
+
+[node name="Plx2" type="Sprite2D" parent="Parallax2D" unique_id=1025717419]
+position = Vector2(582, 326)
+texture = ExtResource("2_57wpc")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=778033393]
+repeat_size = Vector2(1152, 648)
+autoscroll = Vector2(-75, 0)
+
+[node name="Plx3" type="Sprite2D" parent="Parallax2D2" unique_id=855160287]
+position = Vector2(581, 337)
+scale = Vector2(1.0017362, 1)
+texture = ExtResource("3_frvhq")
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1447465940]
+repeat_size = Vector2(1152, 648)
+autoscroll = Vector2(-150, 0)
+
+[node name="Plx4" type="Sprite2D" parent="Parallax2D3" unique_id=1113957561]
+position = Vector2(578.5, 333.5)
+scale = Vector2(1.0060763, 1.0231482)
+texture = ExtResource("4_yexny")
+
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=1061113453]
+repeat_size = Vector2(1152, 648)
+autoscroll = Vector2(-300, 0)
+
+[node name="Plx5" type="Sprite2D" parent="Parallax2D4" unique_id=1956853585]
+position = Vector2(577, 325)
+scale = Vector2(1.0017362, 1.0108025)
+texture = ExtResource("5_y1k8l")
+
+[node name="Ground3" type="Sprite2D" parent="." unique_id=1406273600]
+texture_repeat = 2
+position = Vector2(583, 625)
+texture = ExtResource("6_ksguu")
+region_enabled = true
+region_rect = Rect2(0, 0, 2304, 96)
+script = ExtResource("7_57wpc")
+
+[node name="spawner" type="Node2D" parent="." unique_id=1692696078]
+script = ExtResource("9_yexny")
+
+[node name="Marker2D" type="Marker2D" parent="spawner" unique_id=442236875]
+
+[node name="SpawnTimer" type="Timer" parent="spawner" unique_id=1585555267]
+one_shot = true
+autostart = true
+
+[node name="CharacterBody2D" parent="." unique_id=1485030819 groups=["player"] instance=ExtResource("8_frvhq")]
+z_index = 1
+z_as_relative = false
+position = Vector2(294, 467)
+
+[node name="themed_timer" parent="." unique_id=1780463297 instance=ExtResource("11_ksguu")]
+position = Vector2(1017, 49)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1533343247]
+stream = ExtResource("12_jlqlc")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1673074964]
+stream = ExtResource("13_aaoy5")

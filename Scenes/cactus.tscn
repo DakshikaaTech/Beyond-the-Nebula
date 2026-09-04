@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dmcwe2h4ypakf"]
+
+[ext_resource type="Texture2D" uid="uid://c4j4nse34tdip" path="res://cactus.PNG" id="1_7665s"]
+[ext_resource type="Script" uid="uid://yrn67lqeiy3y" path="res://Scenes/cactus.gd" id="1_krne5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iolu5"]
+radius = 40.0
+height = 112.0
+
+[node name="cactus" type="Area2D" unique_id=823309303]
+z_as_relative = false
+script = ExtResource("1_krne5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1086452830]
+position = Vector2(1093.625, 517.25)
+scale = Vector2(4.240908, 4.2265625)
+texture = ExtResource("1_7665s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=936344666]
+position = Vector2(1095, 519)
+shape = SubResource("CapsuleShape2D_iolu5")

@@ -10,7 +10,7 @@ var buttons_pressed := 0
 var timer_end = false
 
 func _ready() -> void:
-	await themed_timer.Timer(30.0)
+	await themed_timer.Timer(20.0)
 	timer_end = true
 
 func _process(delta: float) -> void:

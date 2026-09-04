@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bunusymaba6ur"]
+
+[ext_resource type="Script" uid="uid://bloljp56v376o" path="res://Scenes/minigame_5.gd" id="1_kpx3j"]
+[ext_resource type="PackedScene" uid="uid://csllfpxj62n0u" path="res://Scenes/pipe.tscn" id="2_ykq01"]
+[ext_resource type="Texture2D" uid="uid://dkkumaqovel6u" path="res://bg.png" id="3_5l52r"]
+[ext_resource type="PackedScene" uid="uid://c4c6r7lxe6xa8" path="res://Scenes/bird.tscn" id="4_te8fa"]
+[ext_resource type="PackedScene" uid="uid://c6k6km0j32rp5" path="res://Scenes/ground.tscn" id="5_oo5rc"]
+[ext_resource type="PackedScene" uid="uid://duqb5vvd15j4g" path="res://Scenes/themed_timer.tscn" id="6_0nun1"]
+
+[node name="Node2D" type="Node2D" unique_id=145183625]
+script = ExtResource("1_kpx3j")
+pipe_scene = ExtResource("2_ykq01")
+
+[node name="Ground" parent="." unique_id=952674131 instance=ExtResource("5_oo5rc")]
+z_index = 1
+position = Vector2(-3, 9)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=372026162]
+position = Vector2(575.5, 280)
+scale = Vector2(1.3368056, 1)
+texture = ExtResource("3_5l52r")
+
+[node name="Bird" parent="." unique_id=2137135201 instance=ExtResource("4_te8fa")]
+position = Vector2(-45, 101)
+scale = Vector2(1.3368056, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=2045641103]
+wait_time = 1.5
+
+[node name="themed_timer" parent="." unique_id=1780463297 instance=ExtResource("6_0nun1")]
+position = Vector2(1075, 44)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

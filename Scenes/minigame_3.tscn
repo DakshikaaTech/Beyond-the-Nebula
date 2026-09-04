@@ -17,7 +17,7 @@ size = Vector2(1154, 10)
 size = Vector2(15, 677)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kkm75"]
-size = Vector2(299.5, 61)
+size = Vector2(160.75, 35)
 
 [node name="Node2D" type="Node2D" unique_id=408448072]
 script = ExtResource("1_6sdpr")
@@ -26,8 +26,10 @@ script = ExtResource("1_6sdpr")
 position = Vector2(1023, 55)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1872158080]
-offset_right = 1920.0
-offset_bottom = 1200.0
+offset_left = -7.0
+offset_top = -11.0
+offset_right = 1913.0
+offset_bottom = 1189.0
 texture = ExtResource("4_we0jk")
 
 [node name="ball" parent="." unique_id=1025570205 instance=ExtResource("1_asmx3")]
@@ -51,10 +53,10 @@ shape = SubResource("RectangleShape2D_6sdpr")
 script = ExtResource("2_ihkhm")
 
 [node name="Sprite2D" type="Sprite2D" parent="paddle" unique_id=1584299781]
-position = Vector2(181.49998, 624)
-scale = Vector2(0.8604167, 1)
+position = Vector2(90.99999, 631.125)
+scale = Vector2(0.45937502, 0.6451391)
 texture = ExtResource("3_we0jk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paddle" unique_id=1515217768]
-position = Vector2(180.25, 628)
+position = Vector2(90, 631.5)
 shape = SubResource("RectangleShape2D_kkm75")

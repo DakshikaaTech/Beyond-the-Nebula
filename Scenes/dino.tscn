@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bufs4m04wlg4h"]
+
+[ext_resource type="Script" uid="uid://dxacvo0d0qqpu" path="res://Scenes/dino.gd" id="1_7ycc7"]
+[ext_resource type="Texture2D" uid="uid://bd3eqly73qv4x" path="res://Jump (1).png" id="2_hmd0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkm75"]
+size = Vector2(236, 213)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1485030819]
+script = ExtResource("1_7ycc7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1837214441]
+position = Vector2(-99, 0.5)
+shape = SubResource("RectangleShape2D_kkm75")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1213101883]
+position = Vector2(-3.0000076, 6.0000076)
+scale = Vector2(0.6382353, 0.5614407)
+texture = ExtResource("2_hmd0f")

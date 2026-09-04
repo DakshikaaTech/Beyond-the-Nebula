@@ -5,18 +5,18 @@
 [ext_resource type="AudioStream" uid="uid://cwwmlobklcj2o" path="res://lumora_studios-pixel-jump-319167.mp3" id="3_376qj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kkm75"]
-radius = 45.891174
+radius = 20.09975
 
 [node name="ball" type="CharacterBody2D" unique_id=1025570205]
 script = ExtResource("1_ij5cq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1586272969]
-position = Vector2(277.37497, 148.625)
-scale = Vector2(0.35626402, 0.3730425)
+position = Vector2(233.87497, 101.625)
+scale = Vector2(0.1616332, 0.16275169)
 texture = ExtResource("2_376qj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=673925855]
-position = Vector2(279, 163)
+position = Vector2(236, 106)
 shape = SubResource("CircleShape2D_kkm75")
 
 [node name="BounceSound" type="AudioStreamPlayer2D" parent="." unique_id=1521821200]
