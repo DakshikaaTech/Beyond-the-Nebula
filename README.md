@@ -11,11 +11,11 @@ You have 5 live and each round, a minigame is chosen to for you to beat. Complet
 
 Minigames:
 
-#1 Platformer game - Collect all 3 stars within 10 seconds
-#2 Clicker game - Click all 7 stars within 7 seconds
-# 3 Pong game - Bounce off the ball using your paddle for 30 seconds
-# 4 Dino game - Jump over the cactus as it spawns and scrolls towards you. Survive for 20 seconds! (Use spacebar)
-#5 Flappy Bird - Fly between pipes. Survive for 15 seconds!
+- #1 Platformer game - Collect all 3 stars within 10 seconds
+- #2 Clicker game - Click all 7 stars within 7 seconds
+- #3 Pong game - Bounce off the ball using your paddle for 30 seconds
+- #4 Dino game - Jump over the cactus as it spawns and scrolls towards you. Survive for 20 seconds! (Use spacebar)
+- #5 Flappy Bird - Fly between pipes. Survive for 15 seconds!
 
 
 Controls
