@@ -27,7 +27,7 @@ Jump -> Space bar
 For Mobile/Tablet users:
 Use the virtual joystick situated on the bottom left of the game screen
 
-NOTE: Mobile/Tablet users will not be able to play the 4th minigame i.e the DIno game. For that game only the spacebar button works in order to jump over cacti.
+*NOTE: Mobile/Tablet users will not be able to play the 4th minigame i.e the DIno game. For that game only the spacebar button works in order to jump over cacti.*
 
 
 Credits:
