@@ -5,11 +5,11 @@ A game full of short space-themed minigames! Survive to make it safely back to E
 
 Try the game here: https://stellarbyte.itch.io/beyond-the-nebula
 
-How to Play
+## How to Play
 
 You have 5 live and each round, a minigame is chosen to for you to beat. Complete the objective to survive. Fail and you lose a life. Lose all 5 and it's game over. 
 
-Minigames:
+## Minigames:
 
 - #1 Platformer game - Collect all 3 stars within 10 seconds
 - #2 Clicker game - Click all 7 stars within 7 seconds
@@ -18,19 +18,19 @@ Minigames:
 - #5 Flappy Bird - Fly between pipes. Survive for 15 seconds!
 
 
-Controls
+## Controls
 
 For Desktop/Laptop users:
 Left and Right -> Arrow buttons
 Jump -> Space bar
 
-For Mobile/Tablet users:
+*For Mobile/Tablet users:*
 Use the virtual joystick situated on the bottom left of the game screen
 
 *NOTE: Mobile/Tablet users will not be able to play the 4th minigame i.e the DIno game. For that game only the spacebar button works in order to jump over cacti.*
 
 
-Credits:
+## Credits:
 
 - Game built using Godot Engine
 - All assets used in the game are open source 
